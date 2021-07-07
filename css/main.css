@@ -10,16 +10,14 @@ html {
 }
 
 body {
-  font-family: "Roboto", sans-serif;
-  background: #ffffff;
-  color: #444444;
+  font-family: "Montserrat", sans-serif;
+  color: white;
   overflow-x: hidden;
 }
 
 h1,
 h2 {
-  font-family: "Roboto Slab", serif;
-  font-weight: 100;
+  font-family: "Cormorant", serif;
 }
 
 h1 {
@@ -35,115 +33,13 @@ li,
 label,
 input {
   font-size: calc(1.6rem + 1vw);
-  font-weight: 300;
 }
 
-p,
-li {
-  line-height: 130%;
-}
-
-header,
-footer {
-  padding: 2rem;
-}
-
-footer {
-  background: #222222;
-}
-
-footer h1 {
-  font-size: 1.6rem;
-}
-
-header {
+#header {
   min-height: 10vh;
-  background: #ffffff;
-}
-
-header img {
-  cursor: pointer;
-}
-
-.intro-section {
-  min-height: 60vh;
-  padding: 0 2rem;
-  background: #ffffff;
-}
-
-.intro-section video {
-  width: 100%;
-  min-height: 30vh;
-  -o-object-fit: cover;
-     object-fit: cover;
-  margin: 4rem 0;
-  cursor: pointer;
-}
-
-.intro-section .title span {
-  color: #82bc00;
-}
-
-.info-container {
-  min-height: 60vh;
-}
-
-.info-container .info-container-header {
-  min-height: 25vh;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.info-container .info-container-header h2 {
-  background: rgba(239, 239, 239, 0.9);
-  color: #82bc00;
-  padding: 2rem;
-}
-
-.info-container .whitepaper-info {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  padding: 4rem;
-  background: #ffffff;
-}
-
-.info-container .whitepaper-info li {
-  font-size: calc(1.6rem + 1vw);
-  margin: 2rem 0;
-}
-
-.info-container .bg {
-  background-image: url("../img/circuit.png");
   width: 100vw;
-  height: 100vh;
-  position: fixed;
-  top: 0;
-  z-index: -1;
-}
-
-.form-section {
+  margin: 0 auto;
+  background: black;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -157,86 +53,43 @@ header img {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background: #efefef;
-  font-size: calc(1.6rem + 1vw);
-  padding: 5rem 0rem;
-  width: 100%;
+  border: 3px solid white;
 }
 
-.form-section select,
-.form-section button {
-  cursor: pointer;
+#header h1 {
+  font-size: 6rem;
 }
 
-.form-section button {
-  width: 100%;
-  background: #82bc00;
-  color: #ffffff;
-  font-size: calc(1.6rem + 1vw);
-  padding: 2rem;
-  margin: 1rem 0;
-  margin-bottom: 4rem;
+.home {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 50px 1fr;
+      grid-template-columns: 50px 1fr;
+  -webkit-column-gap: 3px;
+          column-gap: 3px;
+  margin: 0 3px 3px 3px;
 }
 
-.form-section button:hover {
-  background: #c3d600;
+.home .left-column {
+  min-width: 5rem;
+  background: black;
+  min-height: 90vh;
 }
 
-.form-section form {
-  width: 100%;
-  padding: 2rem;
+.home .blue-square {
+  width: 50px;
+  height: 50px;
+  background: blue;
 }
 
-.form-section label {
-  width: 100%;
+.home .right-column {
+  background: black;
 }
 
-.form-section input,
-.form-section select {
-  width: 100%;
-  padding: 0.5rem;
-  border: none;
-}
-
-.form-section select {
-  padding: 1rem;
-}
-
-.form-section input {
-  font-size: 1.8rem;
-}
-
-.form-section select {
-  border-radius: 0;
-}
-
-.form-section .form-section-header {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.form-section .form-section-header h2 {
-  color: #82bc00;
-  padding: 2rem;
-}
-
-.form-section .form-section-header p {
-  padding-bottom: 2rem;
-}
-
-.disclaimer {
-  font-size: 1.2rem;
-  padding: 0 2rem;
+.home,
+.web,
+.art,
+.connect {
+  min-height: 90vh;
 }
 /*# sourceMappingURL=main.css.map */
