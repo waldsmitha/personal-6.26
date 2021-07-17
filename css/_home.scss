@@ -1,22 +1,111 @@
 .home {
-  display: grid;
-  grid-template-columns: 50px 1fr;
-  column-gap: 3px;
-  margin: 0 3px 3px 3px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  //   margin: $margin;
+  width: 100%;
 
-  .left-column {
-    min-width: 5rem;
-    background: black;
-    min-height: 90vh;
+  h2 {
+    font-size: 3.6rem;
   }
-  .blue-square {
-    width: 50px;
-    height: 50px;
-    background: blue;
+
+  p {
+    font-size: 1.6rem;
+    line-height: 130%;
+    // letter-spacing: 92%;
   }
-  //   .home-footer {
-  //   }
-  .right-column {
+
+  li {
+    font-size: 1.6rem;
+  }
+
+  #header {
+    min-height: 10vh;
+    // width: 100%;
+    margin: $margin $margin 0 $margin;
     background: black;
+    @include flex(center, column, center);
+    h1 {
+      font-size: 5.8rem;
+    }
+  }
+
+  .flex-container {
+    display: flex;
+    flex: 1;
+    margin: $margin 0;
+
+    .left-column {
+      min-width: 5rem;
+      background: black;
+      // min-height: 90vh;
+      margin: 0 $margin;
+      @include flex(center, column, space-between);
+    }
+
+    .blue-square {
+      width: 50px;
+      height: 50px;
+      background: $blue;
+      border-bottom: $margin solid white;
+    }
+    .square {
+      position: absolute;
+      height: 20px;
+      width: 20px;
+    }
+    .yellow-sq {
+      background: $yellow;
+      top: 0;
+      right: 0;
+    }
+    .red-sq {
+      background: $red;
+      bottom: 0;
+      left: 0;
+    }
+    .purple-sq {
+      background: $purple;
+      bottom: 0;
+      right: 0;
+    }
+
+    .home-footer {
+      border-top: $margin solid white;
+      height: 50px;
+      width: 50px;
+      @include flex(center, row, center);
+      h2 {
+        font-size: 1.6rem;
+      }
+    }
+    .right-column {
+      @include flex(center, column, space-between);
+      margin-right: $margin;
+
+      .container {
+        background: black;
+        position: relative;
+        flex: 1;
+        width: 100%;
+        margin-bottom: $margin;
+        padding-left: 2rem;
+        @include flex(flex-start, column, center);
+
+        &:last-child {
+          margin-bottom: 0px;
+        }
+
+        nav {
+          li {
+            padding: 0.5rem 0;
+          }
+        }
+
+        p {
+          padding: 2rem 2rem 2rem 0;
+        }
+      }
+    }
   }
 }

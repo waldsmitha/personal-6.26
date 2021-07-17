@@ -19,42 +19,49 @@
     <title>Austin Waldsmith</title>
   </head>
   <body>
-    <header id="header">
-      <div>
-        <h1>Austin B.</h1>
-        <h1>Waldsmith</h1>
-      </div>
-    </header>
     <main>
       <section class="home">
-        <div class="left-column">
-          <div class="blue-square"></div>
-          <div class="home-footer">
-            <h2>C 2021</h2>
+        <header id="header">
+          <div>
+            <h1>Austin B.</h1>
+            <h1>Waldsmith</h1>
           </div>
-        </div>
-        <div class="right-column">
-          <div class="container">
-            <h2>Designer</h2>
-            <h2>Developer</h2>
-            <h2>Artist</h2>
+        </header>
+        <div class="flex-container">
+          <div class="left-column flex-item">
+            <div class="blue-square"></div>
+            <div class="home-footer">
+              <h2>C 2021</h2>
+            </div>
           </div>
-          <div class="container">
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius quo
-              corrupti eveniet? Dicta doloribus corrupti obcaecati sed minima
-              quidem neque!
-            </p>
-          </div>
-          <div class="container">
-            <nav>
-              <ul>
-                <li>Web Development</li>
-                <li>Logos/Graphic Design</li>
-                <li>Art Gallery</li>
-                <li>Connect</li>
-              </ul>
-            </nav>
+          <div class="right-column flex-item">
+            <div class="container">
+              <div>
+                <h2>Designer</h2>
+                <h2>Developer</h2>
+                <h2>Artist</h2>
+              </div>
+              <div class="square yellow-sq"></div>
+            </div>
+            <div class="container">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius
+                quo corrupti eveniet? Dicta doloribus corrupti obcaecati sed
+                minima quidem neque!
+              </p>
+              <div class="square red-sq"></div>
+            </div>
+            <div class="container">
+              <nav>
+                <ul>
+                  <li>Web Development</li>
+                  <li>Logos/Graphic Design</li>
+                  <li>Art Gallery</li>
+                  <li>Connect</li>
+                </ul>
+              </nav>
+              <div class="square purple-sq"></div>
+            </div>
           </div>
         </div>
       </section>
@@ -62,7 +69,7 @@
         <header>
           <h1>Web Development</h1>
         </header>
-        <div class="container">
+        <div class="container web-list">
           <ul>
             <li>Heart Nouveau</li>
             <li>Sage Garden</li>
@@ -72,17 +79,20 @@
         </div>
         <div class="container">
           <div class="spotlight">
-            <video src="#">Heart Nouveau</video>
-            <h2>Experience <span>Heart Nouveau</span></h2>
+            <video muted autoplay loop src="./img/video.mp4">
+              Heart Nouveau
+            </video>
+            <h2><span>Experience</span> Heart Nouveau</h2>
           </div>
         </div>
+        <div class="square yellow-sq"></div>
       </section>
       <section class="art">
         <header>
           <h1>Art Gallery <span>(2019 - 2021)</span></h1>
         </header>
         <div class="container">
-          <h1>Insert Image</h1>
+          <img src="./img/circuit.png" alt="" />
         </div>
         <div class="grid-container">
           <img src="./img/circuit.png" alt="" />
@@ -97,11 +107,11 @@
           <h1>Logos/Graphic Design</h1>
         </header>
         <div class="flex-container">
-          <div class="left-column">
+          <div class="flex-item">
             <h1>Item</h1>
             <h1>Item</h1>
           </div>
-          <div class="right-column">
+          <div class="flex-item">
             <h1>Item</h1>
             <h1>Item</h1>
           </div>

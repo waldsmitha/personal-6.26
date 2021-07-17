@@ -5,15 +5,18 @@
   justify-content: $justify;
 }
 
-$header1: calc(3rem + 1vw);
+$header1: 3rem;
 $header2: calc(2.5rem + 1vw);
 $body: calc(1.6rem + 1vw);
 
 $green: #82bc00;
 $body-color: #444444;
-$light-gray: #efefef;
-$dark-gray: #222222;
-$white: #ffffff;
+$blue: #3565df;
+$yellow: #d6f60e;
+$red: #dc0e89;
+$purple: #6529b0;
+
+$margin: 3px;
 
 * {
   box-sizing: border-box;
@@ -37,6 +40,12 @@ h2 {
   font-family: "Cormorant", serif;
 }
 
+h1,
+h2,
+li {
+  text-transform: uppercase;
+}
+
 h1 {
   font-size: $header1;
 }
@@ -52,16 +61,8 @@ input {
   font-size: $body;
 }
 
-#header {
-  min-height: 10vh;
-  width: 100vw;
-  margin: 0 auto;
-  background: black;
-  @include flex(center, column, center);
-  h1 {
-    font-size: 6rem;
-  }
-  border: 3px solid white;
+ul {
+  list-style: none;
 }
 
 //
@@ -69,11 +70,5 @@ input {
 @import "home";
 @import "web";
 @import "art";
+@import "design";
 @import "connect";
-
-.home,
-.web,
-.art,
-.connect {
-  min-height: 90vh;
-}

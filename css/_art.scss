@@ -1,0 +1,21 @@
+.art {
+  background: black;
+  margin: 0 $margin $margin $margin;
+
+  header {
+    padding: 2rem;
+  }
+
+  img {
+    object-fit: cover;
+    width: 100%;
+  }
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+
+    row-gap: $margin;
+    column-gap: $margin;
+  }
+}

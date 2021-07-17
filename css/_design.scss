@@ -1,0 +1,24 @@
+.design {
+  background: black;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  margin: 0 $margin $margin $margin;
+
+  header {
+    padding: 2rem;
+  }
+
+  .flex-container {
+    @include flex(center, row, space-around);
+    flex: 1;
+
+    .flex-item {
+      h1 {
+        border: $margin white solid;
+        padding: 2rem;
+        margin: 2rem;
+      }
+    }
+  }
+}

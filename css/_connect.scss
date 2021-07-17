@@ -1,0 +1,21 @@
+.connect {
+  background: black;
+  margin: 0 $margin $margin $margin;
+  min-height: 100vh;
+  overflow: hidden;
+
+  header {
+    padding: 2rem;
+  }
+
+  img {
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .contact-info {
+    h2 {
+      font-size: 2rem;
+    }
+  }
+}
