@@ -186,7 +186,9 @@ main {
 
 .home .flex-container .left-column {
   min-width: 5rem;
+  background: black;
   border-right: 0 solid white;
+  margin-right: 3px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -283,7 +285,7 @@ main {
       -ms-flex: 1;
           flex: 1;
   width: 100%;
-  margin: 0 0 3px 3px;
+  margin: 0 0 6px 6px;
   padding-left: 2rem;
   -webkit-box-align: start;
       -ms-flex-align: start;
@@ -308,7 +310,7 @@ main {
 }
 
 .home .flex-container .right-column .container:last-child {
-  border-bottom: 0px;
+  margin-bottom: 0px;
 }
 
 .home .flex-container .right-column .container nav li {
@@ -802,16 +804,16 @@ main {
 
 .mini-header {
   width: 100%;
-  padding: 0 3px;
+  padding: 0 6px;
   position: fixed;
-  top: 0px;
+  top: 0;
+  left: 0;
   z-index: 10;
   -webkit-transform: translateY(-100%);
           transform: translateY(-100%);
   overflow: hidden;
   -webkit-transition: 0.75s;
   transition: 0.75s;
-  border-bottom: 3px solid white;
 }
 
 .mini-header header {
@@ -832,6 +834,7 @@ main {
       -ms-flex-pack: justify;
           justify-content: space-between;
   font-family: "Cormorant", serif;
+  border-bottom: 3px solid white;
 }
 
 .reveal {

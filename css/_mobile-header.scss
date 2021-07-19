@@ -1,13 +1,13 @@
 .mini-header {
   width: 100%;
-  padding: 0 $margin;
+  padding: 0 $margin * 2;
   position: fixed;
-  top: 0px;
+  top: 0;
+  left: 0;
   z-index: 10;
   transform: translateY(-100%);
   overflow: hidden;
   transition: 0.75s;
-  border-bottom: $margin solid white;
 
   header {
     padding: $margin;
@@ -15,6 +15,7 @@
     background: black;
     @include flex(center, row, space-between);
     font-family: "Cormorant", serif;
+    border-bottom: $margin solid white;
   }
 }
 
