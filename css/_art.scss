@@ -1,0 +1,36 @@
+#art {
+  background: black;
+  border: $border;
+  position: relative;
+
+  header {
+    padding: 2rem 0;
+    h2 {
+      text-transform: uppercase;
+      font-size: 3rem;
+      text-align: center;
+    }
+    span {
+      font-size: 1.5rem;
+    }
+  }
+
+  img {
+    object-fit: cover;
+    width: 100%;
+  }
+
+  .grid-container {
+    padding: 3rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+    row-gap: $margin;
+    column-gap: $margin;
+  }
+
+  .purple-sq {
+    background: $purple;
+    top: 0;
+    right: 0;
+  }
+}
