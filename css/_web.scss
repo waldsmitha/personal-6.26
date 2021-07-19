@@ -30,6 +30,10 @@
     object-fit: cover;
   }
 
+  .width-restrictor {
+    max-width: 40rem;
+    margin: 0 auto;
+  }
   .square {
     position: absolute;
     height: 20px;
@@ -44,10 +48,6 @@
   .container {
     width: 100%;
   }
-
-  // .margin {
-  //   flex: 1;
-  // }
 
   .expand {
     cursor: pointer;

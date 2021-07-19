@@ -23,7 +23,7 @@
   .grid-container {
     padding: 3rem;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
     row-gap: $margin;
     column-gap: $margin;
   }

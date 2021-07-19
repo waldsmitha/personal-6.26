@@ -18,6 +18,11 @@
     font-size: 1.5rem;
   }
 
+  .width-restrictor {
+    max-width: 40rem;
+    margin: 0 auto;
+  }
+
   .image-container {
     width: 100%;
     @include flex(center, row, center);
@@ -92,7 +97,7 @@
 
   .margin {
     margin: $margin;
-    @include flex(center, column, space-between);
+    @include flex(center, column, flex-start);
     min-height: 100vh;
   }
 }

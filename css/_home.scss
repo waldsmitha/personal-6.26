@@ -25,7 +25,7 @@
 
     .left-column {
       min-width: 5rem;
-      background: black;
+      // background: black;
       border-right: $border;
       @include flex(center, column, space-between);
       video {
@@ -78,7 +78,9 @@
         position: relative;
         flex: 1;
         width: 100%;
-        border-bottom: $border;
+        // border-bottom: $margin solid white;
+        // border-left: $margin solid white;
+        margin: 0 0 $margin $margin;
         padding-left: 2rem;
         @include flex(flex-start, column, center);
 

@@ -17,7 +17,7 @@ $red: #dc0e89;
 $purple: #6529b0;
 
 $margin: 3px;
-$border: 3px solid $blue;
+$border: 0 solid white;
 
 * {
   box-sizing: border-box;
@@ -32,9 +32,19 @@ html {
 body {
   font-family: "Montserrat", sans-serif;
   color: white;
-  background: black;
+  // background: white;
   overflow-x: hidden;
   // cursor: none;
+}
+
+#background-video {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  position: fixed;
+  z-index: -1;
+  top: 0;
+  left: 0;
 }
 
 h1 {
@@ -92,19 +102,41 @@ footer {
 }
 
 #header {
-  height: 15vh;
+  min-height: 15vh;
   border: $border;
   background: black;
+  padding: 1rem;
   @include flex(center, column, center);
   h1 {
-    font-size: 5.8rem;
+    font-size: 5rem;
     line-height: 95%;
   }
 }
 
+.desktop-header {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .desktop-header {
+    display: block;
+  }
+  .mobile-header {
+    display: none;
+  }
+}
+
+// main {
+//   display: flex;
+//   flex-direction: column;
+//   flex-wrap: wrap;
+// }
 main {
-  @include flex(flex-start, row, center);
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
+  row-gap: $margin * 2;
+  column-gap: $margin * 2;
+  margin: $margin * 2;
 }
 
 .home,
@@ -112,14 +144,9 @@ main {
 #art,
 #design,
 #connect {
-  flex: 1 1 350px;
   min-height: 85vh;
+  // flex: 1 0 auto;
 }
-#art {
-  flex-basis: 700px;
-}
-
-//
 
 @import "home";
 @import "web";
