@@ -1,9 +1,9 @@
 .home {
-  min-height: 100vh;
+  min-height: 85vh;
   display: flex;
   flex-direction: column;
-  //   margin: $margin;
   width: 100%;
+  border: $border;
 
   h2 {
     font-size: 3.6rem;
@@ -19,44 +19,34 @@
     font-size: 1.6rem;
   }
 
-  #header {
-    min-height: 10vh;
-    // width: 100%;
-    margin: $margin $margin 0 $margin;
-    background: black;
-    @include flex(center, column, center);
-    h1 {
-      font-size: 5.8rem;
-    }
-  }
-
   .flex-container {
     display: flex;
     flex: 1;
-    margin: $margin 0;
 
     .left-column {
       min-width: 5rem;
       background: black;
-      // min-height: 90vh;
-      margin: 0 $margin;
+      border-right: $border;
       @include flex(center, column, space-between);
+      video {
+        height: 100%;
+        width: 5rem;
+        object-fit: none;
+        padding: $margin;
+      }
     }
 
-    .blue-square {
-      width: 50px;
-      height: 50px;
-      background: $blue;
-      border-bottom: $margin solid white;
-    }
-    .square {
-      position: absolute;
-      height: 20px;
+    .blue-sq {
       width: 20px;
+      height: 20px;
+      top: 0;
+      right: 0;
+      background: $blue;
     }
+
     .yellow-sq {
       background: $yellow;
-      top: 0;
+      bottom: 0;
       right: 0;
     }
     .red-sq {
@@ -66,39 +56,51 @@
     }
     .purple-sq {
       background: $purple;
-      bottom: 0;
+      top: 0;
       right: 0;
     }
 
     .home-footer {
-      border-top: $margin solid white;
+      border-top: $border;
       height: 50px;
       width: 50px;
       @include flex(center, row, center);
       h2 {
         font-size: 1.6rem;
+        font-family: "Cormorant", serif;
       }
     }
     .right-column {
       @include flex(center, column, space-between);
-      margin-right: $margin;
 
       .container {
         background: black;
         position: relative;
         flex: 1;
         width: 100%;
-        margin-bottom: $margin;
+        border-bottom: $border;
         padding-left: 2rem;
         @include flex(flex-start, column, center);
 
+        h2 {
+          font-family: "Cormorant", serif;
+          font-size: 3.6rem;
+          line-height: 95%;
+          text-transform: uppercase;
+        }
+
         &:last-child {
-          margin-bottom: 0px;
+          border-bottom: 0px;
         }
 
         nav {
           li {
             padding: 0.5rem 0;
+            cursor: pointer;
+          }
+          h2 {
+            font-size: 3rem;
+            padding-bottom: 1rem;
           }
         }
 

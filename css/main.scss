@@ -6,8 +6,8 @@
 }
 
 $header1: 3rem;
-$header2: calc(2.5rem + 1vw);
-$body: calc(1.6rem + 1vw);
+$header2: 2.2rem;
+$body: 1.6rem;
 
 $green: #82bc00;
 $body-color: #444444;
@@ -17,6 +17,7 @@ $red: #dc0e89;
 $purple: #6529b0;
 
 $margin: 3px;
+$border: 3px solid $blue;
 
 * {
   box-sizing: border-box;
@@ -31,12 +32,12 @@ html {
 body {
   font-family: "Montserrat", sans-serif;
   color: white;
+  background: black;
   overflow-x: hidden;
   // cursor: none;
 }
 
-h1,
-h2 {
+h1 {
   font-family: "Cormorant", serif;
 }
 
@@ -54,6 +55,16 @@ h2 {
   font-size: $header2;
 }
 
+h3 {
+  font-size: $body;
+}
+
+h2,
+p {
+  font-family: "Montserrat", sans-serif;
+  text-transform: none;
+}
+
 p,
 li,
 label,
@@ -65,6 +76,49 @@ ul {
   list-style: none;
 }
 
+.square {
+  position: absolute;
+  height: 20px;
+  width: 20px;
+}
+
+footer {
+  @include flex(center, row, flex-start);
+  background: black;
+  min-height: 5vh;
+  padding: $margin;
+  border: $border;
+  font-family: "Cormorant", serif;
+}
+
+#header {
+  height: 15vh;
+  border: $border;
+  background: black;
+  @include flex(center, column, center);
+  h1 {
+    font-size: 5.8rem;
+    line-height: 95%;
+  }
+}
+
+main {
+  @include flex(flex-start, row, center);
+  flex-wrap: wrap;
+}
+
+.home,
+#web,
+#art,
+#design,
+#connect {
+  flex: 1 1 350px;
+  min-height: 85vh;
+}
+#art {
+  flex-basis: 700px;
+}
+
 //
 
 @import "home";
@@ -72,3 +126,5 @@ ul {
 @import "art";
 @import "design";
 @import "connect";
+@import "mobile-nav";
+@import "mobile-header";

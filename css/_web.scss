@@ -1,16 +1,17 @@
-.web {
+#web {
   background: black;
-  @include flex(center, column, space-between);
-  min-height: 100vh;
-  margin: 0 $margin $margin $margin;
+  display: flex;
+  flex-direction: column;
+  border: $border;
   position: relative;
-  padding: 2rem 0;
 
   header {
     width: 100%;
     text-align: center;
-    h1 {
-      font-family: "Montserrat", sans-serif;
+    padding: 2rem 0;
+    h2 {
+      text-transform: uppercase;
+      font-size: 3rem;
     }
   }
 
@@ -20,8 +21,9 @@
     padding: 0.5rem 0;
   }
   span {
-    font-family: "Montserrat", sans-serif;
-    font-size: 1.6rem;
+    font-family: "Cormorant", serif;
+    // font-size: 1.6rem;
+    text-transform: uppercase;
   }
   video {
     width: 100%;
@@ -36,16 +38,49 @@
   .yellow-sq {
     background: $yellow;
     top: 0;
-    left: 0;
+    right: 0;
   }
 
   .container {
     width: 100%;
   }
 
+  // .margin {
+  //   flex: 1;
+  // }
+
+  .expand {
+    cursor: pointer;
+    position: relative;
+  }
+
+  .plus {
+    transition: 0.5s all;
+  }
+
+  .rotate {
+    transform: rotate(45deg);
+  }
+
+  .text {
+    height: 0;
+    transition: 0.75s all;
+    overflow: hidden;
+  }
+
+  .reveal {
+    height: 20rem;
+    transition: 0.75s all;
+  }
+
   .web-list {
     background: $red;
     padding: 2rem;
+    margin-bottom: 2rem;
+
+    .flex {
+      @include flex(center, row, space-between);
+    }
 
     li {
       position: relative;
@@ -57,13 +92,26 @@
       left: 0;
       width: 100%;
       background: black;
-      padding: 0.1rem;
+      padding: 0.05rem;
     }
   }
 
   .spotlight {
+    padding-top: 2rem;
     h2 {
       padding: 2rem;
+      text-align: center;
+    }
+
+    .video {
+      position: relative;
+      img {
+        width: 40%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
     }
   }
 }

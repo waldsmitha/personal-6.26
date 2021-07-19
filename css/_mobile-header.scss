@@ -1,0 +1,23 @@
+.mini-header {
+  width: 100%;
+  padding: 0 $margin;
+  position: fixed;
+  top: 0px;
+  z-index: 10;
+  transform: translateY(-100%);
+  overflow: hidden;
+  transition: 0.75s;
+  border-bottom: $margin solid white;
+
+  header {
+    padding: $margin;
+    min-height: 5rem;
+    background: black;
+    @include flex(center, row, space-between);
+    font-family: "Cormorant", serif;
+  }
+}
+
+.reveal {
+  transform: translateY(0%);
+}

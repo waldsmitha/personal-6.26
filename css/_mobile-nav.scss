@@ -1,0 +1,60 @@
+.mobile-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  top: 0;
+  right: 0;
+  width: 100vw;
+  height: 100vh;
+  padding: 0 2rem;
+  z-index: 10;
+  clip-path: circle(0vh at 0% 100%);
+  transition: 1s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: $blue;
+  color: white;
+
+  a {
+    text-decoration: none;
+  }
+  ul {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+  }
+
+  li {
+    padding: 3rem 0;
+    color: white;
+  }
+
+  #burger {
+    position: absolute;
+    padding: 2rem 2rem;
+    // background: #696969;
+    bottom: 16%;
+    left: 0;
+    pointer-events: none;
+  }
+  .exit-message {
+    position: fixed;
+    left: 5%;
+    top: 50%;
+    transform: translateY(-50%);
+    writing-mode: sideways-lr;
+  }
+  .mini-logo {
+    position: fixed;
+    top: 5%;
+    left: 5%;
+    h1 {
+      color: white;
+    }
+  }
+}
+
+.nav-active {
+  clip-path: circle(200vh at 0% 100%);
+}

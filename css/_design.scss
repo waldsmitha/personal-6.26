@@ -1,24 +1,47 @@
-.design {
+#design {
   background: black;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  margin: 0 $margin $margin $margin;
+  border: $border;
+  position: relative;
+  padding-bottom: 2rem;
 
   header {
-    padding: 2rem;
+    padding-top: 2rem;
+    h2 {
+      text-transform: uppercase;
+      font-size: 3rem;
+      text-align: center;
+    }
   }
 
   .flex-container {
-    @include flex(center, row, space-around);
-    flex: 1;
+    @include flex(center, row, center);
+    padding: 2rem;
 
     .flex-item {
-      h1 {
-        border: $margin white solid;
-        padding: 2rem;
-        margin: 2rem;
+      flex: 1;
+
+      img {
+        max-width: 100%;
+        height: 100%;
+        object-fit: cover;
       }
     }
+
+    .left {
+      transform: translateY(25px);
+      padding-right: $margin/2;
+    }
+    .right {
+      transform: translateY(-25px);
+      padding-left: $margin/2;
+    }
+  }
+
+  .blue-sq {
+    background: $blue;
+    top: 0;
+    right: 0;
   }
 }
