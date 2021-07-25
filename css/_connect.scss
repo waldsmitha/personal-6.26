@@ -1,12 +1,11 @@
 #connect {
   background: black;
-  border: $border;
   overflow: hidden;
   position: relative;
-  padding: 2rem;
+  padding: 5rem 2rem;
 
   header {
-    padding-bottom: 2rem;
+    padding-bottom: 5rem;
     h2 {
       text-transform: uppercase;
       font-size: 3rem;
@@ -34,8 +33,7 @@
   }
 
   .contact-info {
-    padding: 2rem 0;
-
+    padding-top: 2rem;
     h2 {
       font-size: 2rem;
     }
@@ -48,6 +46,7 @@
 
   label {
     color: $red;
+    margin-top: 2rem;
   }
 
   input {
@@ -83,9 +82,14 @@
     margin-top: 1rem;
     width: 10rem;
     cursor: pointer;
+    transition: 0.25s;
 
     &:focus {
       outline: 2px solid $red;
+    }
+    &:hover {
+      background: $red;
+      color: white;
     }
   }
 
@@ -93,11 +97,5 @@
     background: $red;
     top: 0;
     right: 0;
-  }
-
-  .margin {
-    margin: $margin;
-    @include flex(center, column, flex-start);
-    min-height: 100vh;
   }
 }

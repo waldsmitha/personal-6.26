@@ -16,7 +16,7 @@ $yellow: #d6f60e;
 $red: #dc0e89;
 $purple: #6529b0;
 
-$margin: 3px;
+$margin: 1rem;
 $border: 0 solid white;
 
 * {
@@ -97,13 +97,13 @@ footer {
   background: black;
   min-height: 5vh;
   padding: $margin;
-  border: $border;
+  margin: $margin;
+  margin-top: 0;
   font-family: "Cormorant", serif;
 }
 
 #header {
   min-height: 15vh;
-  border: $border;
   background: black;
   padding: 1rem;
   @include flex(center, column, center);
@@ -118,34 +118,75 @@ footer {
 }
 
 @media screen and (min-width: 768px) {
+  #header {
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+  }
   .desktop-header {
     display: block;
+    @include flex(center, row, space-between);
+    width: 100%;
+    padding: 0 5rem;
+    margin: $margin 0;
+
+    img {
+      padding: 0 1rem;
+    }
   }
-  .mobile-header {
+  .mobile-header,
+  .mini-header {
     display: none;
   }
 }
 
-// main {
-//   display: flex;
-//   flex-direction: column;
-//   flex-wrap: wrap;
-// }
 main {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
-  row-gap: $margin * 2;
-  column-gap: $margin * 2;
-  margin: $margin * 2;
+  margin: 0 $margin;
+  display: flex;
+  flex-wrap: wrap;
+
+  .home {
+    flex: 1 1 35rem;
+    max-height: 80vh;
+  }
+
+  .flex-container-right {
+    flex: 1 1 35rem;
+  }
+}
+
+@media screen and (min-width: 720px) {
+  main {
+    padding-top: calc(15vh + $margin);
+    .home {
+      flex: 0 0 35rem;
+      position: sticky;
+      top: 15%;
+      padding-top: $margin;
+    }
+    .flex-container-right {
+      margin-left: $margin;
+      margin-bottom: $margin * 2;
+      margin-top: 16vh;
+
+      & > * {
+        margin-top: $margin;
+        padding: 5rem;
+      }
+    }
+  }
 }
 
 .home,
+#desktop-home,
 #web,
 #art,
 #design,
 #connect {
-  min-height: 85vh;
-  // flex: 1 0 auto;
+  min-height: 80vh;
+  margin: $margin 0;
+  padding: 5rem 0;
 }
 
 @import "home";
