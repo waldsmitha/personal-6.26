@@ -22,7 +22,7 @@
       autoplay
       loop
       playsinline
-      src="./img/mixing paint blues.mp4"
+      src="./img/background.m4v"
       id="background-video"
     ></video>
     <div class="mini-header">
@@ -59,10 +59,14 @@
         <h1>Waldsmith</h1>
       </div>
       <div class="desktop-header">
-        <h1>Austin B. Waldsmith</h1>
+        <h1>AW</h1>
         <div>
-          <img src="./img/instagram.svg" alt="" />
-          <img src="./img/email.svg" alt="" />
+          <a href="https://www.instagram.com/austinwaldsmith/" target="_blank">
+            <img src="./img/instagram.svg" alt=""
+          /></a>
+          <a href="mailto:austin.waldsmith@gmail.com"
+            ><img src="./img/email.svg" alt=""
+          /></a>
         </div>
       </div>
     </header>
@@ -85,18 +89,22 @@
               <div class="square blue-sq"></div>
             </div>
             <div class="container">
-              <p id="home-text">
-                Visually stunning pieces that marry form and function.
-              </p>
+              <div id="home-text">
+                <p>
+                  I create visually stunning pieces that marry form and
+                  function.
+                </p>
+                <p>Scroll to explore more.</p>
+              </div>
               <div class="square red-sq"></div>
             </div>
             <div class="container">
               <nav>
-                <h2>Services</h2>
+                <h2>Navigation</h2>
                 <ul>
-                  <li>Web Development</li>
-                  <li>Logos/Graphic Design</li>
-                  <li>Art</li>
+                  <a href="#web"><li>Web Development</li></a>
+                  <a href="#design"><li>Logos/Graphic Design</li></a>
+                  <a href="#art"><li>Art</li></a>
                 </ul>
               </nav>
               <div class="square purple-sq"></div>
@@ -106,29 +114,56 @@
       </section>
       <div class="flex-container-right">
         <section id="desktop-home">
-          <div>
+          <header>
             <h2>Austin Waldsmith</h2>
             <h2>Designer | Developer | Artist</h2>
             <h2>Based in Boston</h2>
-          </div>
-          <div class="left">
-            <div class="bio">
-              <h2>Biography</h2>
-              <p>
-                Working finance professional who loves to design websites and
-                create art on the side.
-              </p>
+          </header>
+          <div class="desktop-content">
+            <div class="left">
+              <div class="bio">
+                <h2>Biography:</h2>
+                <p>
+                  Working finance professional with a passion for designing
+                  websites and creating art.
+                </p>
+              </div>
+              <div class="skills">
+                <h2>Services:</h2>
+                <ul>
+                  <li>Front-End Web Development</li>
+                  <li>Logos & Graphic Design</li>
+                  <li>Art (Physical & Digital)</li>
+                </ul>
+              </div>
             </div>
-            <div class="contact">
-              <h2>Contact</h2>
-              <p>Email: austin.waldsmith@gmail.com</p>
-              <p>instagram: @austinwaldsmith</p>
+            <div class="center">
+              <img src="./img/socio.png" alt="" />
+              <p>-Poster Created 5/25/21</p>
+            </div>
+            <div class="right">
+              <div class="experience">
+                <h2>Experience:</h2>
+                <p>2 Years Freelance</p>
+              </div>
+              <div class="skills">
+                <h2>Skills:</h2>
+                <ul>
+                  <li>HTML</li>
+                  <li>CSS</li>
+                  <li>JavaScript</li>
+                  <li>React.Js</li>
+                  <li>WordPress</li>
+                  <li>Figma</li>
+                </ul>
+              </div>
+              <div class="contact">
+                <h2>Contact:</h2>
+                <p>Email: austin.waldsmith@gmail.com</p>
+                <p>instagram: @austinwaldsmith</p>
+              </div>
             </div>
           </div>
-          <div class="center">
-            <img src="./img/Hero.png" alt="" />
-          </div>
-          <div class="right"></div>
         </section>
         <section id="web">
           <header>
@@ -146,10 +181,14 @@
                   </div>
                   <div class="text">
                     <p>
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Voluptatum sit consequatur soluta odio saepe laboriosam
-                      commodi vitae recusandae aliquid totam?
+                      Fake website for a fake band. It was a fun experiment in
+                      javascript-based animations using GSAP.
                     </p>
+                    <a
+                      href="https://waldsmitha.github.io/heart/"
+                      target="_blank"
+                      ><p>Visit</p></a
+                    >
                   </div>
                 </li>
                 <li>
@@ -161,10 +200,14 @@
                   </div>
                   <div class="text">
                     <p>
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Voluptatum sit consequatur soluta odio saepe laboriosam
-                      commodi vitae recusandae aliquid totam?
+                      Prototype website for a naturopathic doctor designed in
+                      Figma and built in React.js.
                     </p>
+                    <a
+                      href="https://fervent-sammet-4ebc43.netlify.app/"
+                      target="_blank"
+                      ><p>Visit</p></a
+                    >
                   </div>
                 </li>
                 <li>
@@ -176,25 +219,34 @@
                   </div>
                   <div class="text">
                     <p>
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Voluptatum sit consequatur soluta odio saepe laboriosam
-                      commodi vitae recusandae aliquid totam?
+                      Instructor led React.js project website that pulls from an
+                      API to dynamically render the UI. State managed with
+                      Redux.
                     </p>
+                    <a
+                      href="https://gifted-bardeen-3faafd.netlify.app/"
+                      target="_blank"
+                      ><p>Visit</p></a
+                    >
                   </div>
                 </li>
                 <li>
                   <div class="flex expand">
-                    <h3>Photography</h3>
+                    <h3>Capture</h3>
                     <div>
                       <img class="plus" src="./img/plus.svg" alt="" />
                     </div>
                   </div>
                   <div class="text">
                     <p>
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Voluptatum sit consequatur soluta odio saepe laboriosam
-                      commodi vitae recusandae aliquid totam?
+                      Fake website for a fake band. It was a fun experiment in
+                      javascript-based animations using GSAP.
                     </p>
+                    <a
+                      href="https://focused-einstein-501c8e.netlify.app/"
+                      target="_blank"
+                      ><p>Visit</p></a
+                    >
                   </div>
                 </li>
               </ul>
@@ -207,7 +259,7 @@
                     autoplay
                     loop
                     playsinline
-                    src="./img/Compressed Yellow Mixing Paint.m4v"
+                    src="./img/yellow.m4v"
                   ></video>
                   <img src="./img/Heart Nouveau 1.png" alt="" />
                 </div>

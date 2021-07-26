@@ -58,16 +58,20 @@ console.log(sectionsArr);
 
 const homeText = document.querySelector("#home-text");
 const textContent = [
-  `Visually stunning pieces that marry form and function.`,
-  `Art in a variety of styles and mediums. 
-Interested in a particular piece or looking to commission? 
-Feel free to reach out.`,
-  `Interested in an original logo design?
-After a quick consultation, I can bring your vision to life.
-Feel free to reach out.`,
-  `I may be reached for inquiries into my services via email, 
-instagram, or the adjacent contact form.`,
+  `<p>I create visually stunning pieces that marry form and function.</p>
+  <p>Scroll to explore more.</p>`,
+  `<p>Select a website to explore what I have created.</p>`,
+  `<p>Art in a variety of styles and mediums.</p>
+  <p>Interested in a particular piece or looking to commission?</p> 
+  <p>Feel free to reach out.</p>`,
+  `<p>Interested in an original logo or design?</p>
+  <p>After a quick consultation, I can bring your vision to life.</p>
+  <p>Feel free to reach out.</p>`,
+  `<p>I may be reached for inquiries into my services via email, 
+  instagram, or the adjacent contact form.</p>`,
 ];
+
+console.log(homeText);
 
 const textTimeline = (newText) => {
   const tl = gsap.timeline({ defaults: { duration: 0.25 } });
@@ -85,17 +89,20 @@ const textTimeline = (newText) => {
 const textUpdate = (item) => {
   console.log(item.id);
   let newText;
-  if (item.id == "web") {
+  if (item.id == "desktop-home") {
     newText = textContent[0];
     textTimeline(newText);
-  } else if (item.id == "art") {
+  } else if (item.id == "web") {
     newText = textContent[1];
     textTimeline(newText);
-  } else if (item.id == "design") {
+  } else if (item.id == "art") {
     newText = textContent[2];
     textTimeline(newText);
-  } else if (item.id == "connect") {
+  } else if (item.id == "design") {
     newText = textContent[3];
+    textTimeline(newText);
+  } else if (item.id == "connect") {
+    newText = textContent[4];
     textTimeline(newText);
   }
 };
@@ -104,6 +111,8 @@ sectionsArr.forEach((item) => {
   ScrollTrigger.create({
     trigger: item,
     start: "top 30%",
+    end: "center top",
+    markers: true,
     onEnter: () => textUpdate(item),
     // onLeave: myLeaveFunc,
     onEnterBack: () => textUpdate(item),

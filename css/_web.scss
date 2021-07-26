@@ -25,7 +25,6 @@
   }
   span {
     font-family: "Cormorant", serif;
-    // font-size: 1.6rem;
     text-transform: uppercase;
   }
   video {
@@ -63,6 +62,10 @@
   .expand {
     cursor: pointer;
     position: relative;
+
+    h3 {
+      font-size: 2rem;
+    }
   }
 
   .plus {
@@ -81,7 +84,7 @@
 
   .reveal {
     padding-top: 2rem;
-    height: 10rem;
+    height: 12rem;
     transition: 0.75s all;
   }
 
@@ -89,6 +92,17 @@
     background: $red;
     padding: 2rem;
     margin-bottom: 2rem;
+
+    a {
+      text-decoration: none;
+      color: white;
+
+      p {
+        margin-top: 0.5rem;
+        font-size: 2rem;
+        text-decoration: underline;
+      }
+    }
 
     .flex {
       @include flex(center, row, space-between);
@@ -130,12 +144,20 @@
 
 @media screen and (min-width: 768px) {
   #web {
-    .text {
-      padding-top: 2rem;
-      height: 10rem;
+    // .text {
+    //   padding-top: 2rem;
+    //   height: 10rem;
+    // }
+    // .plus {
+    //   display: none;
+    // }
+    min-height: auto;
+    .spotlight {
+      padding-top: 0;
     }
-    .plus {
-      display: none;
+
+    .expand {
+      padding-top: 1rem;
     }
   }
 }
