@@ -36,8 +36,6 @@
     @include flex(flex-start, row, space-evenly);
     flex-wrap: wrap;
     height: 100%;
-    min-height: 50vh;
-    // background: white;
 
     & > * {
       flex: 1 1 35rem;
@@ -57,6 +55,10 @@
 
   .container {
     width: 100%;
+
+    a {
+      text-decoration: none;
+    }
   }
 
   .expand {
@@ -124,9 +126,11 @@
 
   .spotlight {
     padding-top: 2rem;
+
     h2 {
       padding: 2rem;
       text-align: center;
+      color: white;
     }
 
     .video {

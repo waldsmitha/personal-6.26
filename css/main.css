@@ -151,6 +151,21 @@ footer {
   .desktop-header img {
     padding: 0 1rem;
   }
+  .desktop-header .icons {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
   .mobile-header,
   .mini-header {
     display: none;
@@ -414,6 +429,7 @@ main .flex-container-right {
   }
   #desktop-home header {
     text-align: center;
+    padding-bottom: 5rem;
   }
   #desktop-home header h2 {
     font-size: 3rem;
@@ -587,7 +603,6 @@ main .flex-container-right {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   height: 100%;
-  min-height: 50vh;
 }
 
 #web .width-restrictor > * {
@@ -611,6 +626,10 @@ main .flex-container-right {
 
 #web .container {
   width: 100%;
+}
+
+#web .container a {
+  text-decoration: none;
 }
 
 #web .expand {
@@ -700,6 +719,7 @@ main .flex-container-right {
 #web .spotlight h2 {
   padding: 2rem;
   text-align: center;
+  color: white;
 }
 
 #web .spotlight .video {

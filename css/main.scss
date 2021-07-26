@@ -135,6 +135,10 @@ footer {
     img {
       padding: 0 1rem;
     }
+
+    .icons {
+      @include flex(center, row, center);
+    }
   }
   .mobile-header,
   .mini-header {

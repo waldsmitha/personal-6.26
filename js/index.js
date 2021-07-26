@@ -112,7 +112,7 @@ sectionsArr.forEach((item) => {
     trigger: item,
     start: "top 30%",
     end: "center top",
-    markers: true,
+    // markers: true,
     onEnter: () => textUpdate(item),
     // onLeave: myLeaveFunc,
     onEnterBack: () => textUpdate(item),

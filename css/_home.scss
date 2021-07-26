@@ -123,11 +123,10 @@
     margin-top: 0;
     background: black;
     @include flex(center, column, space-around);
-    // max-height: 85vh;
 
     header {
       text-align: center;
-      // background: blue;
+      padding-bottom: 5rem;
 
       h2 {
         font-size: 3rem;
