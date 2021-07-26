@@ -18,8 +18,14 @@
   }
 
   .width-restrictor {
-    max-width: 40rem;
-    margin: 0 auto;
+    @include flex(center, row, space-evenly);
+    flex-wrap: wrap;
+
+    & > * {
+      flex: 1 1 40rem;
+      max-width: 50rem;
+      padding: 2rem;
+    }
   }
 
   .image-container {
@@ -33,9 +39,8 @@
   }
 
   .contact-info {
-    padding-top: 2rem;
-    h2 {
-      font-size: 2rem;
+    p {
+      padding-top: 1rem;
     }
   }
 

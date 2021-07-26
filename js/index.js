@@ -60,7 +60,7 @@ const homeText = document.querySelector("#home-text");
 const textContent = [
   `<p>I create visually stunning pieces that marry form and function.</p>
   <p>Scroll to explore more.</p>`,
-  `<p>Select a website to explore what I have created.</p>`,
+  `<p>Select a website to explore a past project.</p>`,
   `<p>Art in a variety of styles and mediums.</p>
   <p>Interested in a particular piece or looking to commission?</p> 
   <p>Feel free to reach out.</p>`,
