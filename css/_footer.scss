@@ -1,0 +1,9 @@
+footer {
+  @include flex(center, row, flex-start);
+  background: black;
+  min-height: 5vh;
+  padding: $margin;
+  margin: $margin;
+  margin-top: 0;
+  font-family: "Cormorant", serif;
+}

@@ -49,6 +49,7 @@ burger.onclick = toggleNav;
 mobileNav.onclick = toggleNav;
 
 //<-- GSAP Text -->
+
 const sections = document.querySelectorAll("section");
 //converts to array
 const sectionsArr = Array.from(sections);
@@ -70,8 +71,6 @@ const textContent = [
   `<p>I may be reached for inquiries into my services via email, 
   instagram, or the adjacent contact form.</p>`,
 ];
-
-console.log(homeText);
 
 const textTimeline = (newText) => {
   const tl = gsap.timeline({ defaults: { duration: 0.25 } });
@@ -119,3 +118,26 @@ sectionsArr.forEach((item) => {
     // onLeaveBack: myLeaveFunc,
   });
 });
+
+//<-- GSAP Home Animations -->
+const header = document.querySelector("#header");
+const homeContainer = document.querySelectorAll(".container-home");
+const homeContent = document.querySelectorAll(".content-home");
+console.log(homeContent);
+// gsap.from(header, { y: "-100%", duration: 1, delay: 0.5 });
+// // gsap.from(homeContainer, { x: "100%", duration: 1, delay: 0.5 });
+// gsap.from(homeContent, { y: "100%", duration: 1, delay: 0.5 });
+// sectionsArr.forEach((section) => {
+//   gsap.from(section, {
+//     scrollTrigger: {
+//       trigger: section,
+//       start: "top 50%",
+//       end: "center top",
+//     },
+//     duration: 0.75,
+//     opacity: 0,
+//     x: "25%",
+//     stagger: 0.25,
+//     ease: "power",
+//   });
+// });

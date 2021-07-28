@@ -10,7 +10,7 @@ $header2: 2.2rem;
 $body: 1.6rem;
 
 $green: #82bc00;
-$body-color: #444444;
+$background: #000000;
 $blue: #3565df;
 $yellow: #d6f60e;
 $red: #dc0e89;
@@ -47,6 +47,8 @@ body {
   top: 0;
   left: 0;
 }
+
+//<-- TEXT ELEMENTS -->
 
 h1 {
   font-family: "Cormorant", serif;
@@ -87,79 +89,48 @@ ul {
   list-style: none;
 }
 
+//<-- UNIVERSAL CLASSES -->
+
 .square {
   position: absolute;
   height: 20px;
   width: 20px;
 }
 
-footer {
-  @include flex(center, row, flex-start);
-  background: black;
-  min-height: 5vh;
-  padding: $margin;
-  margin: $margin;
-  margin-top: 0;
-  font-family: "Cormorant", serif;
+.blue-sq {
+  top: 0;
+  right: 0;
+  background: $blue;
 }
 
-#header {
-  min-height: 15vh;
-  background: black;
-  padding: 1rem;
-  @include flex(center, column, center);
-  h1 {
-    font-size: 5rem;
-    line-height: 95%;
-  }
+.yellow-sq {
+  background: $yellow;
+  bottom: 0;
+  right: 0;
+}
+.red-sq {
+  background: $red;
+  bottom: 0;
+  left: 0;
+}
+.purple-sq {
+  background: $purple;
+  top: 0;
+  right: 0;
 }
 
-.desktop-header {
-  display: none;
+.overflow {
+  overflow: hidden;
 }
 
-@media screen and (min-width: 768px) {
-  #header {
-    position: fixed;
-    top: 0;
-    z-index: 1;
-    width: 100%;
-  }
-  .desktop-header {
-    display: block;
-    @include flex(center, row, space-between);
-    width: 100%;
-    padding: 0 7rem;
-    margin: $margin 0;
-
-    img {
-      padding: 0 1rem;
-    }
-
-    .logo {
-      display: flex;
-
-      img {
-        width: 150px;
-      }
-    }
-
-    .icons {
-      @include flex(center, row, center);
-    }
-  }
-  .mobile-header,
-  .mini-header {
-    display: none;
-  }
-}
+//<-- MAIN CONTENT -->
 
 main {
   margin: 0 $margin;
   display: flex;
   flex-wrap: wrap;
 
-  .home {
+  #home {
     flex: 1 1 35rem;
     max-height: 80vh;
   }
@@ -172,7 +143,7 @@ main {
 @media screen and (min-width: 720px) {
   main {
     padding-top: calc(15vh + $margin);
-    .home {
+    #home {
       flex: 0 0 35rem;
       position: sticky;
       top: 15%;
@@ -191,7 +162,9 @@ main {
   }
 }
 
-.home,
+//<-- UNIVERSAL STYLING -->
+
+#home,
 #desktop-home,
 #web,
 #art,
@@ -202,6 +175,8 @@ main {
   padding: 5rem 0;
 }
 
+//<-- SASS PARTIALS -->
+
 @import "home";
 @import "web";
 @import "art";
@@ -209,3 +184,5 @@ main {
 @import "connect";
 @import "mobile-nav";
 @import "mobile-header";
+@import "logo";
+@import "header";

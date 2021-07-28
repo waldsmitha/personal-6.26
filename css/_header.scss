@@ -1,0 +1,50 @@
+#header {
+  min-height: 15vh;
+  background: black;
+  padding: 1rem;
+  @include flex(center, column, center);
+  h1 {
+    font-size: 5rem;
+    line-height: 95%;
+  }
+}
+
+.desktop-header {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  #header {
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+  }
+  .desktop-header {
+    display: block;
+    @include flex(center, row, space-between);
+    width: 100%;
+    padding: 0 7rem;
+    margin: $margin 0;
+
+    img {
+      padding: 0 1rem;
+    }
+
+    .logo {
+      display: flex;
+
+      svg {
+        width: 150px;
+      }
+    }
+
+    .icons {
+      @include flex(center, row, center);
+    }
+  }
+  .mobile-header,
+  .mini-header {
+    display: none;
+  }
+}
