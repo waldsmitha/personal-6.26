@@ -4,18 +4,22 @@
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 10;
+  z-index: 2;
   transform: translateY(-100%);
   overflow: hidden;
   transition: 0.75s;
 
   header {
+    @include flex(center, row, space-between);
     padding: $margin;
     min-height: 5rem;
-    background: black;
-    @include flex(center, row, space-between);
+    background: $background;
     font-family: "Cormorant", serif;
     border-bottom: 0.2rem solid white;
+  }
+
+  #burger {
+    padding: 1rem;
   }
 }
 

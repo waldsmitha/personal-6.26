@@ -1,6 +1,6 @@
 footer {
   @include flex(center, row, flex-start);
-  background: black;
+  background: $background;
   min-height: 5vh;
   padding: $margin;
   margin: $margin;

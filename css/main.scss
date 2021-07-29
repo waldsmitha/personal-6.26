@@ -6,7 +6,7 @@
 }
 
 $header1: 3rem;
-$header2: 2.2rem;
+$header2: 3rem;
 $body: 1.6rem;
 
 $green: #82bc00;
@@ -17,7 +17,6 @@ $red: #dc0e89;
 $purple: #6529b0;
 
 $margin: 1rem;
-$border: 0 solid white;
 
 * {
   box-sizing: border-box;
@@ -105,13 +104,12 @@ ul {
 
 .yellow-sq {
   background: $yellow;
-  bottom: 0;
+  top: 0;
   right: 0;
 }
 .red-sq {
   background: $red;
   bottom: 0;
-  left: 0;
 }
 .purple-sq {
   background: $purple;
@@ -186,3 +184,4 @@ main {
 @import "mobile-header";
 @import "logo";
 @import "header";
+@import "footer";

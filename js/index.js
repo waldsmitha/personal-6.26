@@ -55,7 +55,7 @@ const sections = document.querySelectorAll("section");
 const sectionsArr = Array.from(sections);
 //removes first element
 sectionsArr.shift();
-console.log(sectionsArr);
+// console.log(sectionsArr);
 
 const homeText = document.querySelector("#home-text");
 const textContent = [
@@ -86,7 +86,7 @@ const textTimeline = (newText) => {
 };
 
 const textUpdate = (item) => {
-  console.log(item.id);
+  // console.log(item.id);
   let newText;
   if (item.id == "desktop-home") {
     newText = textContent[0];
@@ -123,7 +123,7 @@ sectionsArr.forEach((item) => {
 const header = document.querySelector("#header");
 const homeContainer = document.querySelectorAll(".container-home");
 const homeContent = document.querySelectorAll(".content-home");
-console.log(homeContent);
+// console.log(homeContent);
 // gsap.from(header, { y: "-100%", duration: 1, delay: 0.5 });
 // // gsap.from(homeContainer, { x: "100%", duration: 1, delay: 0.5 });
 // gsap.from(homeContent, { y: "100%", duration: 1, delay: 0.5 });

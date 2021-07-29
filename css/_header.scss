@@ -1,6 +1,6 @@
 #header {
   min-height: 15vh;
-  background: black;
+  background: $background;
   padding: 1rem;
   @include flex(center, column, center);
   h1 {
@@ -21,7 +21,6 @@
     width: 100%;
   }
   .desktop-header {
-    display: block;
     @include flex(center, row, space-between);
     width: 100%;
     padding: 0 7rem;

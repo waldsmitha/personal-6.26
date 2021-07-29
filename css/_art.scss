@@ -1,13 +1,11 @@
 #art {
-  background: black;
-  border: $border;
+  background: $background;
   position: relative;
 
   header {
     padding-bottom: 5rem;
     h2 {
       text-transform: uppercase;
-      font-size: 3rem;
       text-align: center;
     }
     span {
@@ -26,12 +24,6 @@
     grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
     row-gap: $margin;
     column-gap: $margin;
-  }
-
-  .purple-sq {
-    background: $purple;
-    top: 0;
-    right: 0;
   }
 }
 

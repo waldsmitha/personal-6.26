@@ -8,10 +8,6 @@
   margin-bottom: 0;
   margin-top: 0;
 
-  h2 {
-    font-size: 3.6rem;
-  }
-
   p {
     font-size: 1.6rem;
     line-height: 130%;
@@ -51,6 +47,7 @@
     }
 
     .right-column-home {
+      width: 100%;
       @include flex(center, column, space-between);
 
       .container-home {
@@ -69,7 +66,6 @@
 
         h2 {
           font-family: "Cormorant", serif;
-          font-size: 3rem;
           line-height: 120%;
           text-transform: uppercase;
         }
@@ -87,6 +83,12 @@
         &:last-child {
           margin-bottom: 0px;
         }
+      }
+
+      .red-sq {
+        background: $red;
+        bottom: 0;
+        left: 0;
       }
     }
   }
@@ -109,7 +111,6 @@
         font-size: 4rem;
       }
       h2 {
-        font-size: 3rem;
         font-family: "Cormorant", serif;
       }
     }

@@ -30,20 +30,11 @@
     color: white;
   }
 
-  #burger {
-    position: absolute;
-    padding: 2rem 2rem;
-    // background: #696969;
-    bottom: 16%;
-    left: 0;
-    pointer-events: none;
-  }
   .exit-message {
     position: fixed;
-    left: 5%;
+    left: -15%;
     top: 50%;
-    transform: translateY(-50%);
-    writing-mode: sideways-lr;
+    transform: rotate(-90deg);
   }
   .mini-logo {
     position: fixed;
