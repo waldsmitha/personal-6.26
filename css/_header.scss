@@ -1,6 +1,6 @@
 #header {
   min-height: 15vh;
-  background: $background;
+  background: black;
   padding: 1rem;
   @include flex(center, column, center);
   h1 {
@@ -19,6 +19,8 @@
     top: 0;
     z-index: 1;
     width: 100%;
+    min-height: 10vh;
+    padding: 0;
   }
   .desktop-header {
     @include flex(center, row, space-between);
@@ -34,7 +36,7 @@
       display: flex;
 
       svg {
-        width: 150px;
+        width: 100px;
       }
     }
 

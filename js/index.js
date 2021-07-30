@@ -24,13 +24,12 @@ expandIcons.forEach((item, i) => {
 const miniHeader = document.querySelector(".mini-header");
 let distance;
 
-const offSet = () => {
+const heightOffset = () => {
   distance = window.pageYOffset;
-  //   console.log(window.pageYOffset);
   return distance;
 };
 
-window.addEventListener("scroll", offSet);
+window.addEventListener("scroll", heightOffset);
 window.addEventListener("scroll", () => {
   if (distance > 100) {
     miniHeader.classList.add("reveal");
@@ -55,22 +54,30 @@ const sections = document.querySelectorAll("section");
 const sectionsArr = Array.from(sections);
 //removes first element
 sectionsArr.shift();
-// console.log(sectionsArr);
 
 const homeText = document.querySelector("#home-text");
 const textContent = [
-  `<p>I create visually stunning pieces that marry form and function.</p>
+  `<p>Visually stunning pieces that marry form and function.</p>
   <p>Scroll to explore more.</p>`,
   `<p>Select a website to explore a past project.</p>`,
   `<p>Art in a variety of styles and mediums.</p>
-  <p>Interested in a particular piece or looking to commission?</p> 
+  <p>Interested in a particular piece or looking to commission?</p>
   <p>Feel free to reach out.</p>`,
   `<p>Interested in an original logo or design?</p>
   <p>After a quick consultation, I can bring your vision to life.</p>
   <p>Feel free to reach out.</p>`,
-  `<p>I may be reached for inquiries into my services via email, 
+  `<p>I may be reached for inquiries into my services via email,
   instagram, or the adjacent contact form.</p>`,
 ];
+const elementIds = ["desktop-home", "web", "art", "design", "connect"];
+let width;
+
+const windowWidth = () => {
+  width = window.innerWidth;
+  return width;
+};
+
+window.addEventListener("resize", windowWidth);
 
 const textTimeline = (newText) => {
   const tl = gsap.timeline({ defaults: { duration: 0.25 } });
@@ -85,24 +92,16 @@ const textTimeline = (newText) => {
   });
 };
 
+const idUpdate = (item) => {
+  let index = sectionsArr.indexOf(item);
+  textTimeline(textContent[index]);
+};
+
 const textUpdate = (item) => {
-  // console.log(item.id);
-  let newText;
-  if (item.id == "desktop-home") {
-    newText = textContent[0];
-    textTimeline(newText);
-  } else if (item.id == "web") {
-    newText = textContent[1];
-    textTimeline(newText);
-  } else if (item.id == "art") {
-    newText = textContent[2];
-    textTimeline(newText);
-  } else if (item.id == "design") {
-    newText = textContent[3];
-    textTimeline(newText);
-  } else if (item.id == "connect") {
-    newText = textContent[4];
-    textTimeline(newText);
+  if (width < 768) {
+    textTimeline(textContent[0]);
+  } else {
+    idUpdate(item);
   }
 };
 
@@ -141,3 +140,33 @@ const homeContent = document.querySelectorAll(".content-home");
 //     ease: "power",
 //   });
 // });
+
+// Background Video
+
+// const backgroundVideo = document.getElementById("background-video");
+// // console.log(backgroundVideo.readyState);
+// backgroundVideo.onloadeddata = (e) => {
+//   console.log("loaded");
+// };
+
+const video = document.querySelector("#background-video");
+
+video.onloadeddata = (event) => {
+  // console.log(
+  //   "Yay! The readyState just increased to  " +
+  //     "HAVE_CURRENT_DATA or greater for the first time."
+  // );
+  // gsap.to("#load-background", {
+  //   opacity: 0,
+  //   duration: 1,
+  //   delay: 1,
+  //   display: "none",
+  // });
+};
+
+gsap.to("#load-background", {
+  opacity: 0,
+  duration: 1,
+  delay: 1,
+  display: "none",
+});

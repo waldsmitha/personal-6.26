@@ -13,7 +13,7 @@
     @include flex(center, row, space-between);
     padding: $margin;
     min-height: 5rem;
-    background: $background;
+    background: black;
     font-family: "Cormorant", serif;
     border-bottom: 0.2rem solid white;
   }

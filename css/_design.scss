@@ -36,6 +36,7 @@
 
 @media screen and (min-width: 1000px) {
   #design {
+    min-height: auto;
     .grid-container {
       grid-template-columns: repeat(2, 1fr);
       max-width: 500px;

@@ -27,6 +27,27 @@ body {
   left: 0;
 }
 
+#load-background {
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  background: black;
+  z-index: 10;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 h1 {
   font-family: "Cormorant", serif;
 }
@@ -110,34 +131,36 @@ main {
 
 main #home {
   -webkit-box-flex: 1;
-      -ms-flex: 1 1 35rem;
-          flex: 1 1 35rem;
+      -ms-flex: 1 1 30rem;
+          flex: 1 1 30rem;
   max-height: 80vh;
 }
 
 main .flex-container-right {
   -webkit-box-flex: 1;
-      -ms-flex: 1 1 35rem;
-          flex: 1 1 35rem;
+      -ms-flex: 1 1;
+          flex: 1 1;
 }
 
-@media screen and (min-width: 720px) {
+@media screen and (min-width: 768px) {
   main {
     padding-top: calc(15vh + $margin);
   }
   main #home {
     -webkit-box-flex: 0;
-        -ms-flex: 0 0 35rem;
-            flex: 0 0 35rem;
+        -ms-flex: 0 0 25rem;
+            flex: 0 0 25rem;
     position: -webkit-sticky;
     position: sticky;
-    top: 15%;
+    top: 10%;
     padding-top: 1rem;
+    max-height: 90vh;
   }
   main .flex-container-right {
     margin-left: 1rem;
     margin-bottom: 0;
-    margin-top: 16vh;
+    margin-top: 10vh;
+    padding-top: 1rem;
   }
   main .flex-container-right > * {
     margin-top: 1rem;
@@ -151,7 +174,7 @@ main .flex-container-right {
 #art,
 #design,
 #connect {
-  min-height: 80vh;
+  min-height: 90vh;
   margin: 1rem 0;
   padding: 5rem 0;
 }
@@ -167,7 +190,6 @@ main .flex-container-right {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 100%;
   margin-bottom: 0;
   margin-top: 0;
 }
@@ -185,6 +207,7 @@ main .flex-container-right {
   padding: 0.5rem;
   margin: 0;
   line-height: 120%;
+  font-size: 2rem;
   font-family: "Cormorant", serif;
 }
 
@@ -211,7 +234,7 @@ main .flex-container-right {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  background: #000000;
+  background: #000000da;
   margin-right: 1rem;
 }
 
@@ -269,7 +292,7 @@ main .flex-container-right {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background: #000000;
+  background: #000000da;
   position: relative;
   -webkit-box-flex: 1;
       -ms-flex: 1;
@@ -316,7 +339,7 @@ main .flex-container-right {
 @media screen and (min-width: 720px) {
   #desktop-home {
     margin-top: 0;
-    background: black;
+    background: #000000da;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -448,7 +471,7 @@ main .flex-container-right {
 }
 
 #web {
-  background: #000000;
+  background: #000000da;
   position: relative;
   margin-top: 0;
 }
@@ -621,7 +644,7 @@ main .flex-container-right {
 }
 
 #art {
-  background: #000000;
+  background: #000000da;
   position: relative;
 }
 
@@ -665,7 +688,7 @@ main .flex-container-right {
 }
 
 #design {
-  background: #000000;
+  background: #000000da;
   position: relative;
 }
 
@@ -706,6 +729,9 @@ main .flex-container-right {
 }
 
 @media screen and (min-width: 1000px) {
+  #design {
+    min-height: auto;
+  }
   #design .grid-container {
     -ms-grid-columns: (1fr)[2];
         grid-template-columns: repeat(2, 1fr);
@@ -715,7 +741,7 @@ main .flex-container-right {
 }
 
 #connect {
-  background: #000000;
+  background: #000000da;
   overflow: hidden;
   position: relative;
   padding: 5rem 2rem;
@@ -960,7 +986,7 @@ main .flex-container-right {
           justify-content: space-between;
   padding: 1rem;
   min-height: 5rem;
-  background: #000000;
+  background: black;
   font-family: "Cormorant", serif;
   border-bottom: 0.2rem solid white;
 }
@@ -976,7 +1002,7 @@ main .flex-container-right {
 
 #header {
   min-height: 15vh;
-  background: #000000;
+  background: black;
   padding: 1rem;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -1008,6 +1034,8 @@ main .flex-container-right {
     top: 0;
     z-index: 1;
     width: 100%;
+    min-height: 10vh;
+    padding: 0;
   }
   .desktop-header {
     -webkit-box-align: center;
@@ -1036,7 +1064,7 @@ main .flex-container-right {
     display: flex;
   }
   .desktop-header .logo svg {
-    width: 150px;
+    width: 100px;
   }
   .desktop-header .icons {
     -webkit-box-align: center;
@@ -1073,7 +1101,7 @@ footer {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  background: #000000;
+  background: #000000da;
   min-height: 5vh;
   padding: 1rem;
   margin: 1rem;
