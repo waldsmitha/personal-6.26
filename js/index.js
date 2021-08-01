@@ -57,8 +57,8 @@ sectionsArr.shift();
 
 const homeText = document.querySelector("#home-text");
 const textContent = [
-  `<div><p>Visually stunning pieces that marry form and function.</p>
-  <p>Scroll to explore more.</p></div>`,
+  `<div>
+  <p>Scroll down to explore more.</p></div>`,
   `<p>Select a website to explore a past project.</p>`,
   `<div><p>Art in a variety of styles and mediums.</p>
   <p>Interested in a particular piece or looking to commission?</p>
@@ -146,12 +146,12 @@ const titlesUpdater = () => {
   const titleTl = gsap.timeline({ defaults: { duration: 1 } });
   titleTl
     .to("#titles", {
-      background: colors[0],
+      background: colors[2],
       duration: 0,
     })
     .to("#titles", {
       delay: 2.5,
-      background: colors[0],
+      background: colors[2],
       text: { value: "Designer", delimiter: " " },
     })
 
@@ -160,7 +160,7 @@ const titlesUpdater = () => {
       text: { value: "Developer", delimiter: " " },
     })
     .to("#titles", {
-      background: colors[2],
+      background: colors[0],
       text: { value: "Artist", delimiter: " " },
     })
     .to("#titles", {
@@ -168,7 +168,8 @@ const titlesUpdater = () => {
       duration: 0,
       delay: 0.25,
       text: {
-        value: "<h1>Austin Waldsmith</h1><p>Designer | Developer | Artist</p>",
+        value:
+          "<h1>Austin Waldsmith</h1><p>Designer | Developer | Artist</p><p>Based in Boston</p>",
         delimiter: " ",
       },
     });
@@ -230,20 +231,20 @@ gsap.to("#horizontal-scroll", {
 // Background Video
 const video = document.querySelector("#background-video");
 
-video.onloadeddata = (event) => {
-  gsap.to("#load-background", {
-    opacity: 0,
-    duration: 1,
-    delay: 1.5,
-    display: "none",
-  });
-  titlesUpdater();
-};
+// video.onloadeddata = (event) => {
+//   gsap.to("#load-background", {
+//     opacity: 0,
+//     duration: 1,
+//     delay: 1.5,
+//     display: "none",
+//   });
+//   titlesUpdater();
+// };
 
-// gsap.to("#load-background", {
-//   opacity: 0,
-//   duration: 1.5,
-//   delay: 2,
-//   display: "none",
-// });
-// titlesUpdater();
+gsap.to("#load-background", {
+  opacity: 0,
+  duration: 1.5,
+  delay: 2,
+  display: "none",
+});
+titlesUpdater();

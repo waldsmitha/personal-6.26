@@ -14,6 +14,7 @@
 
   li {
     font-size: 1.6rem;
+    font-family: "Cormorant", serif;
   }
 
   #home-text {
@@ -22,8 +23,6 @@
       padding: 0.5rem;
       margin: 0;
       line-height: 120%;
-      font-size: 2rem;
-      font-family: "Cormorant", serif;
 
       &:first-child {
         &::first-letter {
@@ -78,6 +77,7 @@
 
       &:last-child {
         margin-bottom: 0px;
+        flex: 1.3;
       }
     }
 
@@ -90,17 +90,8 @@
       padding: 0 2rem;
       h1 {
         text-align: center;
+        font-size: 4rem;
       }
-    }
-    .blue-sq {
-      left: 0;
-    }
-
-    .red-sq {
-      right: 0;
-    }
-    .purple-sq {
-      left: 0;
     }
   }
 }
@@ -112,15 +103,20 @@
   #desktop-home {
     margin-top: 0;
     background: $background;
-    @include flex(center, column, space-around);
+    @include flex(center, column, center);
 
     header {
       text-align: center;
-      padding-bottom: 5rem;
+      padding-bottom: 10rem;
       h1 {
         text-transform: none;
-        font-size: 6rem;
+        font-size: 4rem;
         color: $red;
+        font-family: "Montserrat", sans-serif;
+        padding: 0 2rem;
+        &:first-child {
+          margin-bottom: 2rem;
+        }
       }
       h2 {
         font-family: "Cormorant", serif;

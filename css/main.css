@@ -201,6 +201,7 @@ main .flex-container-right {
 
 #home li {
   font-size: 1.6rem;
+  font-family: "Cormorant", serif;
 }
 
 #home #home-text {
@@ -223,8 +224,6 @@ main .flex-container-right {
   padding: 0.5rem;
   margin: 0;
   line-height: 120%;
-  font-size: 2rem;
-  font-family: "Cormorant", serif;
 }
 
 #home #home-text p:first-child::first-letter {
@@ -306,6 +305,9 @@ main .flex-container-right {
 
 #home .flex-container .container-home:last-child {
   margin-bottom: 0px;
+  -webkit-box-flex: 1.3;
+      -ms-flex: 1.3;
+          flex: 1.3;
 }
 
 #home .flex-container #titles {
@@ -331,18 +333,7 @@ main .flex-container-right {
 
 #home .flex-container #titles h1 {
   text-align: center;
-}
-
-#home .flex-container .blue-sq {
-  left: 0;
-}
-
-#home .flex-container .red-sq {
-  right: 0;
-}
-
-#home .flex-container .purple-sq {
-  left: 0;
+  font-size: 4rem;
 }
 
 #desktop-home {
@@ -363,17 +354,23 @@ main .flex-container-right {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   #desktop-home header {
     text-align: center;
-    padding-bottom: 5rem;
+    padding-bottom: 10rem;
   }
   #desktop-home header h1 {
     text-transform: none;
-    font-size: 6rem;
+    font-size: 4rem;
     color: #dc0e89;
+    font-family: "Montserrat", sans-serif;
+    padding: 0 2rem;
+  }
+  #desktop-home header h1:first-child {
+    margin-bottom: 2rem;
   }
   #desktop-home header h2 {
     font-family: "Cormorant", serif;
@@ -676,6 +673,10 @@ main .flex-container-right {
   text-align: center;
 }
 
+#art header p {
+  text-align: center;
+}
+
 #art header span {
   font-size: 1.5rem;
 }
@@ -772,6 +773,10 @@ main .flex-container-right {
   text-align: center;
 }
 
+#design header p {
+  text-align: center;
+}
+
 #design .grid-container {
   padding: 0 2rem 2rem 2rem;
   display: -ms-grid;
@@ -855,7 +860,8 @@ main .flex-container-right {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 40rem;
           flex: 1 1 40rem;
-  max-width: 50rem;
+  max-width: 45rem;
+  margin: 0 2rem;
 }
 
 #connect .image-container {
@@ -1232,7 +1238,7 @@ svg .svg-elem-7 {
     bottom: 0;
     left: 0;
     width: 0;
-    height: 0.5rem;
+    height: 0.3rem;
     background: #3565df;
   }
 }
