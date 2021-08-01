@@ -57,15 +57,15 @@ sectionsArr.shift();
 
 const homeText = document.querySelector("#home-text");
 const textContent = [
-  `<p>Visually stunning pieces that marry form and function.</p>
-  <p>Scroll to explore more.</p>`,
+  `<div><p>Visually stunning pieces that marry form and function.</p>
+  <p>Scroll to explore more.</p></div>`,
   `<p>Select a website to explore a past project.</p>`,
-  `<p>Art in a variety of styles and mediums.</p>
+  `<div><p>Art in a variety of styles and mediums.</p>
   <p>Interested in a particular piece or looking to commission?</p>
-  <p>Feel free to reach out.</p>`,
-  `<p>Interested in an original logo or design?</p>
+  <p>Feel free to reach out.</p></div>`,
+  `<div><p>Interested in an original logo or design?</p>
   <p>After a quick consultation, I can bring your vision to life.</p>
-  <p>Feel free to reach out.</p>`,
+  <p>Feel free to reach out.</p></div>`,
   `<p>I may be reached for inquiries into my services via email,
   instagram, or the adjacent contact form.</p>`,
 ];
@@ -142,13 +142,6 @@ const homeContent = document.querySelectorAll(".content-home");
 // });
 
 // Background Video
-
-// const backgroundVideo = document.getElementById("background-video");
-// // console.log(backgroundVideo.readyState);
-// backgroundVideo.onloadeddata = (e) => {
-//   console.log("loaded");
-// };
-
 const video = document.querySelector("#background-video");
 
 video.onloadeddata = (event) => {
@@ -170,3 +163,56 @@ gsap.to("#load-background", {
   delay: 2,
   display: "none",
 });
+
+const colors = ["#3565df", "#6529b0", "#dc0e89", "#000000"];
+
+const titleTl = gsap.timeline({ defaults: { duration: 1 } });
+
+titleTl
+  .to("#titles", {
+    background: colors[0],
+    duration: 0,
+  })
+  .to("#titles", {
+    delay: 0.5,
+    background: colors[0],
+    text: { value: "Designer", delimiter: " " },
+  })
+
+  .to("#titles", {
+    background: colors[1],
+    text: { value: "Developer", delimiter: " " },
+  })
+  .to("#titles", {
+    background: colors[2],
+    text: { value: "Artist", delimiter: " " },
+  })
+  .to("#titles", {
+    background: colors[3],
+    duration: 0,
+    delay: 0.25,
+    text: { value: "Austin Waldsmith", delimiter: " " },
+  });
+
+// IMAGE VIEWER
+const artViewer = document.querySelector(".art-viewer");
+const galleryImages = document.querySelectorAll(".img-viewer");
+const artViewerToggle = (e) => {
+  console.log(e.target);
+  artViewer.classList.contains("reveal")
+    ? artViewer.classList.remove("reveal")
+    : artViewer.classList.add("reveal");
+
+  artViewer.innerHTML = `
+      <div class="art-viewer-background">
+      <img src=${e.target.src} alt="" />
+      <h2>"${e.target.alt}"</h2>
+      <p>Click anywhere to exit.</p>
+      </div>
+    `;
+};
+
+galleryImages.forEach((img) => {
+  img.addEventListener("click", artViewerToggle);
+});
+artViewer.addEventListener("click", artViewerToggle);

@@ -16,6 +16,7 @@
   img {
     object-fit: cover;
     width: 100%;
+    cursor: pointer;
   }
 
   .grid-container {
@@ -25,8 +26,49 @@
     row-gap: $margin;
     column-gap: $margin;
   }
+
+  .art-viewer {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 100vw;
+    height: 100vh;
+    background: black;
+
+    .art-viewer-background {
+      height: 100%;
+      @include flex(center, column, center);
+      img {
+        max-width: 80vw;
+        max-height: 80vh;
+        // height: 100%;
+        width: 100%;
+      }
+      h2 {
+        padding: 1rem;
+        font-family: "Cormorant", serif;
+      }
+    }
+  }
+  .reveal {
+    display: block;
+  }
 }
 
+@media screen and (min-width: 768px) {
+  #art {
+    .art-viewer {
+      .art-viewer-background {
+        img {
+          height: 100%;
+          width: auto;
+        }
+      }
+    }
+  }
+}
 @media screen and (min-width: 1440px) {
   #art {
     .grid-container {

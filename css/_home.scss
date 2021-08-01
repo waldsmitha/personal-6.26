@@ -17,6 +17,7 @@
   }
 
   #home-text {
+    @include flex(center, column, center);
     p {
       padding: 0.5rem;
       margin: 0;
@@ -37,9 +38,12 @@
       background: $background;
       position: relative;
       flex: 1;
+      height: 100%;
       width: 100%;
       margin-bottom: $margin;
       padding: 0 2rem;
+      position: relative;
+      overflow: hidden;
 
       a {
         text-decoration: none;
@@ -67,6 +71,12 @@
       }
     }
 
+    #titles {
+      background: $blue;
+      @include flex(center, row, center);
+      font-size: 3rem;
+    }
+
     .red-sq {
       background: $red;
       bottom: 0;
@@ -89,7 +99,8 @@
       padding-bottom: 5rem;
       h1 {
         text-transform: none;
-        font-size: 4rem;
+        font-size: 6rem;
+        color: $red;
       }
       h2 {
         font-family: "Cormorant", serif;
@@ -125,6 +136,7 @@
         margin-bottom: 1rem;
         font-family: "Cormorant", serif;
         text-transform: uppercase;
+        color: $red;
       }
 
       & > * {

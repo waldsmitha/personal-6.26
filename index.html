@@ -25,7 +25,7 @@
       playsinline
       src="./img/background.m4v"
     ></video>
-    <div id="load-background">
+    <!-- <div id="load-background">
       <div class="logo">
         <svg
           width="181"
@@ -93,7 +93,7 @@
           ></circle>
         </svg>
       </div>
-    </div>
+    </div> -->
     <!-- MOBILE NAV -->
     <div class="mobile-nav">
       <ul>
@@ -126,8 +126,71 @@
     </div>
     <header id="header">
       <div class="mobile-header">
-        <h1>Austin B.</h1>
-        <h1>Waldsmith</h1>
+        <svg
+          width="181"
+          height="47"
+          viewBox="0 0 181 47"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <line
+            x1="1"
+            y1="23.5549"
+            x2="98.4566"
+            y2="23.5549"
+            stroke="#BD9814"
+            stroke-width="3"
+            class="svg-elem-1"
+          ></line>
+          <path
+            d="M71.1797 17.1545C68.0018 11.5931 64.3392 7.85851 57.0763 4.81451C49.8134 1.77052 41.0265 0.482005 32.3553 1.1894C23.6841 1.89679 15.7208 4.55175 9.95133 8.65892C4.18186 12.7661 1.00031 18.0449 1.00031 23.5104L37.0169 23.5104"
+            stroke="#BD9814"
+            stroke-width="3"
+            class="svg-elem-2"
+          ></path>
+          <line
+            x1="179.669"
+            y1="23.4658"
+            x2="82.2123"
+            y2="23.4658"
+            stroke="#BD9814"
+            stroke-width="3"
+            class="svg-elem-3"
+          ></line>
+          <path
+            d="M109.49 29.8663C112.668 35.4276 116.331 39.1622 123.594 42.2062C130.857 45.2502 139.643 46.5387 148.315 45.8314C156.986 45.124 164.949 42.469 170.719 38.3618C176.488 34.2547 179.67 28.9759 179.67 23.5104L143.653 23.5104"
+            stroke="#BD9814"
+            stroke-width="3"
+            class="svg-elem-4"
+          ></path>
+          <line
+            x1="87.1133"
+            y1="24.1052"
+            x2="87.1133"
+            y2="17.2197"
+            stroke="#BD9814"
+            stroke-width="3"
+            class="svg-elem-5"
+          ></line>
+          <line
+            x1="90.8213"
+            y1="27.4829"
+            x2="90.8213"
+            y2="16.8898"
+            stroke="#BD9814"
+            stroke-width="3"
+            class="svg-elem-6"
+          ></line>
+          <circle
+            cx="90.5119"
+            cy="23.046"
+            r="6.66518"
+            transform="rotate(-90 90.5119 23.046)"
+            stroke="#BD9814"
+            stroke-width="3"
+            class="svg-elem-7"
+          ></circle>
+        </svg>
       </div>
       <div class="desktop-header">
         <div class="logo">
@@ -215,18 +278,15 @@
     <main>
       <section id="home">
         <div class="flex-container">
-          <div class="container-home">
-            <div>
-              <h2>Designer</h2>
-              <h2>Developer</h2>
-              <h2>Artist</h2>
-            </div>
+          <div id="titles" class="container-home">
             <div class="square blue-sq"></div>
           </div>
           <div class="container-home">
             <div id="home-text">
-              <p>Visually stunning pieces that marry form and function.</p>
-              <p>Scroll to explore more.</p>
+              <div>
+                <p>Visually stunning pieces that marry form and function.</p>
+                <p>Scroll to explore more.</p>
+              </div>
             </div>
             <div class="square red-sq"></div>
           </div>
@@ -409,16 +469,29 @@
             <h2>Art Gallery <span>(2019 - 2021)</span></h2>
           </header>
           <div class="grid-container">
-            <img src="./img/bliss.JPG" alt="" />
-            <img src="./img/crowned.JPG" alt="" />
-            <img src="./img/fates.jpg" alt="" />
-            <img src="./img/Hero.png" alt="" />
-            <img src="./img/jimi.png" alt="" />
-            <img src="./img/peaceful-protest.jpg" alt="" />
-            <img src="./img/hand-rider.JPG" alt="" />
-            <img src="./img/bonchoix.jpg" alt="" />
-            <!-- <img src="./img/socio.png" alt="" /> -->
+            <img class="img-viewer" src="./img/bliss.JPG" alt="Bliss" />
+            <img class="img-viewer" src="./img/crowned.JPG" alt="Crowned" />
+            <img class="img-viewer" src="./img/fates.jpg" alt="Fates" />
+            <img class="img-viewer" src="./img/Hero.png" alt="Hero" />
+            <img class="img-viewer" src="./img/jimi.png" alt="Jimi" />
+            <img
+              class="img-viewer"
+              src="./img/peaceful-protest.jpg"
+              alt="Peaceful Protest"
+            />
+            <img
+              class="img-viewer"
+              src="./img/hand-rider.JPG"
+              alt="Hand Rider"
+            />
+            <img class="img-viewer" src="./img/bonchoix.jpg" alt="Bon Choix" />
+            <img
+              class="img-viewer"
+              src="./img/socio.png"
+              alt="Socio Harmonic"
+            />
           </div>
+          <div class="art-viewer"></div>
           <div class="square purple-sq"></div>
         </section>
         <section id="design">
@@ -426,10 +499,10 @@
             <h2>Logos/Graphic Design</h2>
           </header>
           <div class="grid-container">
-            <img src="./img/llama.svg" alt="" />
-            <img src="./img/wolf.svg" alt="" />
-            <img src="./img/swan.svg" alt="" />
-            <img src="./img/mija.svg" alt="" />
+            <img class="img-viewer" src="./img/llama.svg" alt="Llama" />
+            <img class="img-viewer" src="./img/wolf.svg" alt="Wolfie" />
+            <img class="img-viewer" src="./img/swan.svg" alt="Swansie" />
+            <img class="img-viewer" src="./img/mija.svg" alt="Mija Bakes" />
           </div>
           <div class="square blue-sq"></div>
         </section>

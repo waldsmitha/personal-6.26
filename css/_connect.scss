@@ -51,6 +51,7 @@
   label {
     color: $red;
     margin-top: 2rem;
+    font-size: 2rem;
   }
 
   input {
@@ -87,6 +88,7 @@
     width: 10rem;
     cursor: pointer;
     transition: 0.25s;
+    font-size: 2rem;
 
     &:focus {
       outline: 2px solid $red;
