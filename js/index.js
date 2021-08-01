@@ -220,7 +220,7 @@ gsap.to("#horizontal-scroll", {
     trigger: "body",
     start: "0%",
     end: `+=${bodyHeight()}`,
-    markers: true,
+    // markers: true,
     scrub: 0.5,
   },
   width: "100%",
