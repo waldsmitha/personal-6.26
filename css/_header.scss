@@ -2,6 +2,8 @@
   min-height: 15vh;
   background: black;
   padding: 1rem;
+  position: relative;
+  // border-bottom: 3px solid #bd9814;
   @include flex(center, column, center);
   h1 {
     font-size: 5rem;
@@ -47,5 +49,13 @@
   .mobile-header,
   .mini-header {
     display: none;
+  }
+  #horizontal-scroll {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 0.5rem;
+    background: $blue;
   }
 }

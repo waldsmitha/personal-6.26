@@ -148,8 +148,8 @@ main .flex-container-right {
   }
   main #home {
     -webkit-box-flex: 0;
-        -ms-flex: 0 0 25rem;
-            flex: 0 0 25rem;
+        -ms-flex: 0 0 30rem;
+            flex: 0 0 30rem;
     position: -webkit-sticky;
     position: sticky;
     top: 10%;
@@ -227,6 +227,11 @@ main .flex-container-right {
   font-family: "Cormorant", serif;
 }
 
+#home #home-text p:first-child::first-letter {
+  font-size: 4rem;
+  color: #dc0e89;
+}
+
 #home .flex-container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -295,6 +300,10 @@ main .flex-container-right {
   padding-bottom: 1rem;
 }
 
+#home .flex-container .container-home:first-child {
+  padding: 0;
+}
+
 #home .flex-container .container-home:last-child {
   margin-bottom: 0px;
 }
@@ -307,19 +316,32 @@ main .flex-container-right {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
+  -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   font-size: 3rem;
+  height: 100%;
+  width: 100%;
+  padding: 0 2rem;
+}
+
+#home .flex-container #titles h1 {
+  text-align: center;
+}
+
+#home .flex-container .blue-sq {
+  left: 0;
 }
 
 #home .flex-container .red-sq {
-  background: #dc0e89;
-  bottom: 0;
+  right: 0;
+}
+
+#home .flex-container .purple-sq {
   left: 0;
 }
 
@@ -367,12 +389,13 @@ main .flex-container-right {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
     height: 100%;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+    width: 100%;
   }
   #desktop-home .left,
   #desktop-home .center,
@@ -381,6 +404,7 @@ main .flex-container-right {
     -webkit-box-flex: 1;
         -ms-flex: 1 1 30rem;
             flex: 1 1 30rem;
+    max-width: 40rem;
   }
   #desktop-home img {
     width: 80%;
@@ -467,6 +491,7 @@ main .flex-container-right {
   background: #000000da;
   position: relative;
   margin-top: 0;
+  border-top: 3px solid #d6f60e;
 }
 
 #web header {
@@ -639,6 +664,7 @@ main .flex-container-right {
 #art {
   background: #000000da;
   position: relative;
+  border-top: 3px solid #6529b0;
 }
 
 #art header {
@@ -734,6 +760,7 @@ main .flex-container-right {
 #design {
   background: #000000da;
   position: relative;
+  border-top: 3px solid #3565df;
 }
 
 #design header {
@@ -790,6 +817,7 @@ main .flex-container-right {
   overflow: hidden;
   position: relative;
   padding: 5rem 2rem;
+  border-top: 3px solid #dc0e89;
 }
 
 #connect header {
@@ -1117,6 +1145,7 @@ svg .svg-elem-7 {
   min-height: 15vh;
   background: black;
   padding: 1rem;
+  position: relative;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -1197,6 +1226,14 @@ svg .svg-elem-7 {
   .mobile-header,
   .mini-header {
     display: none;
+  }
+  #horizontal-scroll {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 0.5rem;
+    background: #3565df;
   }
 }
 

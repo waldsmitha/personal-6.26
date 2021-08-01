@@ -141,30 +141,6 @@ const homeContent = document.querySelectorAll(".content-home");
 //   });
 // });
 
-// Background Video
-const video = document.querySelector("#background-video");
-
-video.onloadeddata = (event) => {
-  console.log(
-    "Yay! The readyState just increased to  " +
-      "HAVE_CURRENT_DATA or greater for the first time."
-  );
-  gsap.to("#load-background", {
-    opacity: 0,
-    duration: 1,
-    delay: 1.5,
-    display: "none",
-  });
-  titlesUpdater();
-};
-
-// gsap.to("#load-background", {
-//   opacity: 0,
-//   duration: 1.5,
-//   delay: 2,
-//   display: "none",
-// });
-
 const titlesUpdater = () => {
   const colors = ["#3565df", "#6529b0", "#dc0e89", "#000000da"];
   const titleTl = gsap.timeline({ defaults: { duration: 1 } });
@@ -191,9 +167,13 @@ const titlesUpdater = () => {
       background: colors[3],
       duration: 0,
       delay: 0.25,
-      text: { value: "Austin Waldsmith", delimiter: " " },
+      text: {
+        value: "<h1>Austin Waldsmith</h1><p>Designer | Developer | Artist</p>",
+        delimiter: " ",
+      },
     });
 };
+
 // IMAGE VIEWER
 const artViewer = document.querySelector(".art-viewer");
 const galleryImages = document.querySelectorAll(".img-viewer");
@@ -216,3 +196,54 @@ galleryImages.forEach((img) => {
   img.addEventListener("click", artViewerToggle);
 });
 artViewer.addEventListener("click", artViewerToggle);
+
+//HORIZONTAL SCROLL
+// const bodyHeight = document.body.clientHeight;
+const bodyHeight = () => {
+  const body = document.body;
+  const html = document.documentElement;
+  const height = Math.max(
+    body.scrollHeight,
+    body.offsetHeight,
+    html.clientHeight,
+    html.scrollHeight,
+    html.offsetHeight
+  );
+  return height;
+};
+
+window.addEventListener("resize", bodyHeight);
+window.addEventListener("scroll", bodyHeight);
+
+gsap.to("#horizontal-scroll", {
+  scrollTrigger: {
+    trigger: "body",
+    start: "0%",
+    end: `+=${bodyHeight()}`,
+    markers: true,
+    scrub: 0.5,
+  },
+  width: "100%",
+});
+
+//Functions to run on start
+// Background Video
+const video = document.querySelector("#background-video");
+
+video.onloadeddata = (event) => {
+  gsap.to("#load-background", {
+    opacity: 0,
+    duration: 1,
+    delay: 1.5,
+    display: "none",
+  });
+  titlesUpdater();
+};
+
+// gsap.to("#load-background", {
+//   opacity: 0,
+//   duration: 1.5,
+//   delay: 2,
+//   display: "none",
+// });
+// titlesUpdater();
