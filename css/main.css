@@ -131,15 +131,15 @@ main {
 
 main #home {
   -webkit-box-flex: 1;
-      -ms-flex: 1 1 30rem;
-          flex: 1 1 30rem;
+      -ms-flex: 1 1 35rem;
+          flex: 1 1 35rem;
   max-height: 80vh;
 }
 
 main .flex-container-right {
   -webkit-box-flex: 1;
-      -ms-flex: 1 1;
-          flex: 1 1;
+      -ms-flex: 1 1 35rem;
+          flex: 1 1 35rem;
 }
 
 @media screen and (min-width: 768px) {
@@ -219,6 +219,10 @@ main .flex-container-right {
           justify-content: center;
 }
 
+#home #home-text .center {
+  text-align: center;
+}
+
 #home #home-text p {
   padding: 0.5rem;
   margin: 0;
@@ -246,15 +250,15 @@ main .flex-container-right {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 #home .flex-container .container-home {
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -292,6 +296,12 @@ main .flex-container-right {
 #home .flex-container .container-home nav li {
   padding: 0.5rem 0;
   cursor: pointer;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+#home .flex-container .container-home nav li:hover {
+  color: #dc0e89;
 }
 
 #home .flex-container .container-home nav h2 {
@@ -358,12 +368,26 @@ main .flex-container-right {
             justify-content: center;
   }
   #desktop-home header {
-    text-align: center;
     padding-bottom: 10rem;
+    margin: 0 5rem;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   #desktop-home header h1 {
+    text-align: center;
     text-transform: none;
-    font-size: 4rem;
+    font-size: 3.5rem;
     color: #dc0e89;
     font-family: "Montserrat", sans-serif;
     padding: 0 2rem;
@@ -422,9 +446,9 @@ main .flex-container-right {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     height: 100%;
     padding: 0 5rem;
   }
@@ -439,16 +463,12 @@ main .flex-container-right {
   #desktop-home .right > * {
     padding: 2rem 0;
   }
-  #desktop-home .right {
-    -webkit-box-ordinal-group: 3;
-        -ms-flex-order: 2;
-            order: 2;
-  }
   #desktop-home .center {
-    -webkit-box-ordinal-group: 4;
-        -ms-flex-order: 3;
-            order: 3;
+    display: none;
   }
+}
+
+@media screen and (min-width: 1230px) {
   #desktop-home .center {
     -webkit-box-align: center;
         -ms-flex-align: center;
@@ -470,16 +490,22 @@ main .flex-container-right {
   }
 }
 
-@media screen and (min-width: 1320px) {
-  #desktop-home .desktop-content .right {
-    -webkit-box-ordinal-group: 4;
-        -ms-flex-order: 3;
-            order: 3;
-  }
-  #desktop-home .desktop-content .center {
-    -webkit-box-ordinal-group: 3;
-        -ms-flex-order: 2;
-            order: 2;
+@media screen and (min-width: 930px) {
+  #desktop-home .right,
+  #desktop-home .left {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
 
@@ -887,6 +913,17 @@ main .flex-container-right {
      object-fit: cover;
 }
 
+#connect .contact-info a {
+  text-decoration: none;
+  color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+#connect .contact-info a:hover {
+  color: #dc0e89;
+}
+
 #connect .contact-info p {
   padding-top: 1rem;
 }
@@ -947,8 +984,8 @@ main .flex-container-right {
   margin-top: 1rem;
   width: 10rem;
   cursor: pointer;
-  -webkit-transition: 0.25s;
-  transition: 0.25s;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
   font-size: 2rem;
 }
 

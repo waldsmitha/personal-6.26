@@ -57,7 +57,7 @@ sectionsArr.shift();
 
 const homeText = document.querySelector("#home-text");
 const textContent = [
-  `<div>
+  `<div class="center">
   <p>Scroll down to explore more.</p></div>`,
   `<p>Select a website to explore a past project.</p>`,
   `<div><p>Art in a variety of styles and mediums.</p>

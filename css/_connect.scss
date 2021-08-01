@@ -40,6 +40,15 @@
   }
 
   .contact-info {
+    a {
+      text-decoration: none;
+      color: white;
+      transition: 0.4s;
+
+      &:hover {
+        color: $red;
+      }
+    }
     p {
       padding-top: 1rem;
     }
@@ -89,7 +98,7 @@
     margin-top: 1rem;
     width: 10rem;
     cursor: pointer;
-    transition: 0.25s;
+    transition: 0.4s;
     font-size: 2rem;
 
     &:focus {
