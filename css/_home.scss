@@ -29,67 +29,48 @@
   .flex-container {
     display: flex;
     flex: 1;
+    width: 100%;
+    @include flex(center, column, space-between);
 
-    .left-column-home {
-      @include flex(center, column, space-between);
+    .container-home {
+      @include flex(flex-start, column, center);
       background: $background;
-      margin-right: $margin;
+      position: relative;
+      flex: 1;
+      width: 100%;
+      margin-bottom: $margin;
+      padding: 0 2rem;
 
-      .home-footer {
-        height: 50px;
-        width: 50px;
-        @include flex(center, row, center);
-        h2 {
-          font-size: 1.6rem;
-          font-family: "Cormorant", serif;
+      a {
+        text-decoration: none;
+        color: white;
+      }
+
+      h2 {
+        font-family: "Cormorant", serif;
+        line-height: 120%;
+        text-transform: uppercase;
+      }
+
+      nav {
+        li {
+          padding: 0.5rem 0;
+          cursor: pointer;
         }
+        h2 {
+          padding-bottom: 1rem;
+        }
+      }
+
+      &:last-child {
+        margin-bottom: 0px;
       }
     }
 
-    .right-column-home {
-      width: 100%;
-      @include flex(center, column, space-between);
-
-      .container-home {
-        @include flex(flex-start, column, center);
-        background: $background;
-        position: relative;
-        flex: 1;
-        width: 100%;
-        margin-bottom: $margin;
-        padding: 0 2rem;
-
-        a {
-          text-decoration: none;
-          color: white;
-        }
-
-        h2 {
-          font-family: "Cormorant", serif;
-          line-height: 120%;
-          text-transform: uppercase;
-        }
-
-        nav {
-          li {
-            padding: 0.5rem 0;
-            cursor: pointer;
-          }
-          h2 {
-            padding-bottom: 1rem;
-          }
-        }
-
-        &:last-child {
-          margin-bottom: 0px;
-        }
-      }
-
-      .red-sq {
-        background: $red;
-        bottom: 0;
-        left: 0;
-      }
+    .red-sq {
+      background: $red;
+      bottom: 0;
+      left: 0;
     }
   }
 }

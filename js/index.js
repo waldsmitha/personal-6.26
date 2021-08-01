@@ -166,7 +166,7 @@ video.onloadeddata = (event) => {
 
 gsap.to("#load-background", {
   opacity: 0,
-  duration: 1,
-  delay: 1,
+  duration: 1.5,
+  delay: 2,
   display: "none",
 });
