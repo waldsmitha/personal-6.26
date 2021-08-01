@@ -145,55 +145,55 @@ const homeContent = document.querySelectorAll(".content-home");
 const video = document.querySelector("#background-video");
 
 video.onloadeddata = (event) => {
-  // console.log(
-  //   "Yay! The readyState just increased to  " +
-  //     "HAVE_CURRENT_DATA or greater for the first time."
-  // );
-  // gsap.to("#load-background", {
-  //   opacity: 0,
-  //   duration: 1,
-  //   delay: 1,
-  //   display: "none",
-  // });
+  console.log(
+    "Yay! The readyState just increased to  " +
+      "HAVE_CURRENT_DATA or greater for the first time."
+  );
+  gsap.to("#load-background", {
+    opacity: 0,
+    duration: 1,
+    delay: 1.5,
+    display: "none",
+  });
+  titlesUpdater();
 };
 
-gsap.to("#load-background", {
-  opacity: 0,
-  duration: 1.5,
-  delay: 2,
-  display: "none",
-});
+// gsap.to("#load-background", {
+//   opacity: 0,
+//   duration: 1.5,
+//   delay: 2,
+//   display: "none",
+// });
 
-const colors = ["#3565df", "#6529b0", "#dc0e89", "#000000"];
+const titlesUpdater = () => {
+  const colors = ["#3565df", "#6529b0", "#dc0e89", "#000000da"];
+  const titleTl = gsap.timeline({ defaults: { duration: 1 } });
+  titleTl
+    .to("#titles", {
+      background: colors[0],
+      duration: 0,
+    })
+    .to("#titles", {
+      delay: 2.5,
+      background: colors[0],
+      text: { value: "Designer", delimiter: " " },
+    })
 
-const titleTl = gsap.timeline({ defaults: { duration: 1 } });
-
-titleTl
-  .to("#titles", {
-    background: colors[0],
-    duration: 0,
-  })
-  .to("#titles", {
-    delay: 0.5,
-    background: colors[0],
-    text: { value: "Designer", delimiter: " " },
-  })
-
-  .to("#titles", {
-    background: colors[1],
-    text: { value: "Developer", delimiter: " " },
-  })
-  .to("#titles", {
-    background: colors[2],
-    text: { value: "Artist", delimiter: " " },
-  })
-  .to("#titles", {
-    background: colors[3],
-    duration: 0,
-    delay: 0.25,
-    text: { value: "Austin Waldsmith", delimiter: " " },
-  });
-
+    .to("#titles", {
+      background: colors[1],
+      text: { value: "Developer", delimiter: " " },
+    })
+    .to("#titles", {
+      background: colors[2],
+      text: { value: "Artist", delimiter: " " },
+    })
+    .to("#titles", {
+      background: colors[3],
+      duration: 0,
+      delay: 0.25,
+      text: { value: "Austin Waldsmith", delimiter: " " },
+    });
+};
 // IMAGE VIEWER
 const artViewer = document.querySelector(".art-viewer");
 const galleryImages = document.querySelectorAll(".img-viewer");
